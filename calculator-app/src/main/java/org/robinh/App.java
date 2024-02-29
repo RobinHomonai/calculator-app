@@ -52,7 +52,7 @@ public class App {
         int number1 = scanner.nextInt();
         System.out.println("Enter second number:");
         int number2 = scanner.nextInt();
-        int result;
+        int result = 0;
 
         switch (calculate) {
             case "Addition":
@@ -68,6 +68,22 @@ public class App {
                 result = division(number1, number2);
                 break;
         }
+        System.out.println(calculate + result);
     }
 
+    public static int addition(int number1, int number2) {
+        return number1 + number2;
+    }
+
+    public static int subtraction(int number1, int number2) {
+        return number1 - number2;
+    }
+
+    public static int multiplication(int number1, int number2) {
+        return number1 * number2;
+    }
+
+    public static int division(int number1, int number2) {
+        return number1 / number2;
+    }
 }
