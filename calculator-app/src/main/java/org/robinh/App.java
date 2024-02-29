@@ -46,4 +46,28 @@ public class App {
         System.out.println("4. Division");
         System.out.println("5. Exit");
     }
+
+    public static void calculation(String calculate, Scanner scanner) {
+        System.out.println("Enter first number:");
+        int number1 = scanner.nextInt();
+        System.out.println("Enter second number:");
+        int number2 = scanner.nextInt();
+        int result;
+
+        switch (calculate) {
+            case "Addition":
+                result = addition(number1, number2);
+                break;
+            case "Subtraction":
+                result = subtraction(number1, number2);
+                break;
+            case "Multiplication":
+                result = multiplication(number1, number2);
+                break;
+            case "Division":
+                result = division(number1, number2);
+                break;
+        }
+    }
+
 }
