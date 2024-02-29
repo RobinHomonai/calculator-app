@@ -38,19 +38,20 @@ public class App {
     }
 
     public static void menu() {
-        System.out.println(" **** The Calculator App **** ");
+        System.out.println("**** The Calculator App ****");
         System.out.println("Choose what type of calculation:");
         System.out.println("1. Addition");
         System.out.println("2. Subtraction");
         System.out.println("3. Multiplication");
         System.out.println("4. Division");
         System.out.println("5. Exit");
+        System.out.print("Make your choice: ");
     }
 
     public static void calculation(String calculate, Scanner scanner) {
-        System.out.println("Enter first number:");
+        System.out.print("You chose " + calculate + "!" + " Enter first number: ");
         int number1 = scanner.nextInt();
-        System.out.println("Enter second number:");
+        System.out.print("Enter second number: ");
         int number2 = scanner.nextInt();
         int result = 0;
 
@@ -68,7 +69,8 @@ public class App {
                 result = division(number1, number2);
                 break;
         }
-        System.out.println(calculate + result);
+        System.out.println("The result is: " + result);
+        System.out.println("****************************");
     }
 
     public static int addition(int number1, int number2) {
